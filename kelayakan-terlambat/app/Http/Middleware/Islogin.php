@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Islogin
 {
-    public function handle(Request $request, Closure $next): Response // Use the correct return type
+    public function handle(Request $request, Closure $next) // Use the correct return type
     {
         if (Auth::check()) {
             return $next($request);
